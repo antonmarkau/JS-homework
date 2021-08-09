@@ -1,1 +1,1 @@
-# JS-homework
+# JS_homework
