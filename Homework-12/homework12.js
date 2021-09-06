@@ -25,9 +25,23 @@ currentTime(numbers);
 // Задание 3
 // Не нашёл другого способа, кроме как использовать непройденный нагугленный regexp
 
+// сделать массив с гласными
+// и с помощью перебир. методов или двух простых циклов 
+// посчитать совпадения
+
 function countVowels(str) {
-    var vowels = str.replace(/[^аоийеёэыуюя]/gi, '');
-    return vowels.length;
+    var vowels = ['а', 'о', 'и', 'й', 'е', 'ё', 'э', 'ы', 'у', 'ю', 'я'];
+    var letters = str.toLowerCase().split('');
+    var vowelsCount = 0;
+
+    for (var i = 0; i < letters.length; i++) {
+        for (var k = 0; k < vowels.length; k++) {
+            if (letters[i] === vowels[k]) {
+                vowelsCount++;
+            }
+        }
+    }
+    return vowelsCount;
 }
 
 var string = 'Съешь же ещё этих мягких французских булок, да выпей чаю';

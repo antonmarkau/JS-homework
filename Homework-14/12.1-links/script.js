@@ -15,26 +15,30 @@ emptyContainer.appendChild(newParagraph1);
 emptyContainer.appendChild(newParagraph2);
 
 // Делаем действия со ссылками первого абзаца
-var button = document.getElementById('button');
+var buttons = document.getElementsByTagName('BUTTON');
 
-button.onclick = function() {
-    var firstParahraph = emptyContainer.firstChild;
-    var links = firstParahraph.getElementsByTagName('a');
-    for (var i = 0; i < links.length; i++) {
-        links[i].style.color = 'cyan';
-        links[i].style.fontWeight = 'bold';
-    }
+for (var i = 0; i < buttons.length; i++) {
+    var button = buttons[i];
+
+    button.addEventListener('click', function() {
+        var firstParahraph = emptyContainer.firstChild;
+        var links = Array.from(firstParahraph.childNodes).filter(function(element) {
+            return element.tagName == 'A';
+        });
+        for (var i = 0; i < links.length; i++) {
+            links[i].className = 'ColorCyan FontWeightBold';
+        }
+    });
 }
 
 // Действия по нажатию на второй абзац и ссылки в нём
 var secondParagraph = emptyContainer.lastChild;
 
 secondParagraph.onclick = function(event) {
+    event.preventDefault();
     var target = event.target;
 
     if (target.tagName === 'A') {
-        //target.preventDefault(); // Не смог заставить это работать, сделал отмену перехода поссылке через return false;
         alert(target.href);
-        return false;
     }
 }

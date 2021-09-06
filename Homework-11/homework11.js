@@ -1,11 +1,7 @@
 // Задание 1
 function filterNumbersArr(numbers) {
-    var newArr = [];
-
-    numbers.forEach(function(item, i, numbers) {
-        if (item > 0) {
-            newArr[newArr.length] = item;
-        }
+    var newArr = numbers.filter(function(number) {
+        return number > 0;
     });
     return newArr;
 }
@@ -13,44 +9,31 @@ function filterNumbersArr(numbers) {
 console.log(filterNumbersArr([-1, 0, 2, 34, -2]));
 
 // Задание 2
-firstPositiveNumber = function(numbers) {
-    var positiveNumber;
-
-    numbers.forEach(function(item, i, numbers) {
-        if (!positiveNumber && item > 0) {
-            positiveNumber = item;
-        }
+function firstPositiveNumber(numbers) {
+    var newArr = numbers.filter(function(number) {
+        return number > 0;
     });
-    return positiveNumber;
+    return newArr[0];
 }
 
 console.log(firstPositiveNumber([-6, 0, -46, 0, 42, -3, 0, 5, 59]));
 
 // Задание 3
-isPalindrome = function(word) {
-    var originalWord = word.toLowerCase();
-    var reversedWord = originalWord.split('').reverse().join('');
+function isPalindrome(word) {
+    var reversedWord = word.toLowerCase().split('').reverse().join('');
 
-    if (originalWord == reversedWord) {
-        return true;
-    } else {
-        return false;
-    }
+    return word.toLowerCase() == reversedWord;
 }
 
 console.log(isPalindrome('шалаШ')); // true
 console.log(isPalindrome('привет')); // false
 
 // Задание 4
-areAnagrams = function(firstWord, secondWord) {
+function areAnagrams(firstWord, secondWord) {
     var a = firstWord.toLowerCase().split('').sort().join('');
     var b = secondWord.toLowerCase().split('').sort().join('');
 
-    if (a === b) {
-        return true;
-    } else {
-        return false;
-    }
+    return a == b;
 }
 
 console.log(areAnagrams('кот', 'отк')); // true
@@ -58,7 +41,7 @@ console.log(areAnagrams('кот', 'атк')); // false
 console.log(areAnagrams('кот', 'отко')); // false
 
 // Задание 5
-divideArr = function(arr, size) {
+function divideArr(arr, size) {
     var slicedArr = [];
 
     for (var i = 0; i < arr.length; i += size) {
