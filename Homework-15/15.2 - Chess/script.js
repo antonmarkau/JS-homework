@@ -74,12 +74,10 @@ button.onclick = function() {
                     if (k % 2 == 0) { // Для чётного квадрата
                         var squareBlack = document.createElement('div');
                         squareBlack.className = ('squareBlack');
-                        squareBlack.id = ('square');
                         row.append(squareBlack);
                     } else { // Для нечётного квадрата
                         var squareWhite = document.createElement('div');
                         squareWhite.className = ('squareWhite');
-                        squareWhite.id = ('square');
                         row.append(squareWhite);
                     }
                 }
@@ -88,12 +86,10 @@ button.onclick = function() {
                     if (k % 2 == 0) { // Для чётного квадрата
                         var squareWhite = document.createElement('div');
                         squareWhite.className = ('squareWhite');
-                        squareWhite.id = ('square');
                         row.append(squareWhite);
                     } else { // Для нечётного квадрата
                         var squareBlack = document.createElement('div');
                         squareBlack.className = ('squareBlack');
-                        squareBlack.id = ('square');
                         row.append(squareBlack);
                     }
                 }
