@@ -1,0 +1,102 @@
+html {
+    background-color: #1B2631;
+}
+
+#button_load {
+    margin-bottom: 15px;
+}
+
+.main-block {
+    display: none;
+}
+
+/* Style the buttons that are used to open the tab content */
+.users-tabs button {
+    background-color: #52BE80;
+    box-shadow: inset 0 -10px 10px -10px #000000a2;
+    width: 130px;
+    float: left;
+    border: none;
+    border-radius: 10px 10px 0px 0px;
+    border-bottom: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.2s;
+}
+
+/* Change background color of buttons on hover */
+.users-tabs button:hover {
+    background-color: #ABEBC6;
+}
+
+/* Create an active/current tablink class */
+.users-tabs button.active {
+    background-color: whitesmoke;
+    box-shadow: none;
+}
+
+/* Style the info block */
+.tabcontent {
+    display: none;
+    flex-direction: row;
+    width: 900px;
+    padding: 6px 12px;
+    background-color: whitesmoke;
+    border-radius: 0px 10px 10px 10px;
+    border-top: none;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 25px;
+    font-style: italic;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.user-info p {
+    margin: 5px 0px 5px 0px;
+}
+
+/* Style the error message */
+.error-container {
+    font-family: Arial, Helvetica, sans-serif;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 300px;
+    height: 200px;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    box-shadow: 0 0px 10px -10px #000000a2;
+}
+
+.button-close {
+    display: block;
+    float: right;
+    margin: 10px;
+    padding: 0px;
+    height: 24px;
+    width: 24px;
+    border: none;
+    background-color: whitesmoke;
+    cursor: pointer;
+}
+
+.error-text {
+    clear: both;
+    display: block;
+    margin: 0 auto;
+    height: 100%;
+    align-items: center;
+}
+
+.error-text p:last-of-type {
+    margin: 0px;
+    font-size: 64px;
+    font-weight: bold;
+    color: rgb(130, 186, 238);
+}
