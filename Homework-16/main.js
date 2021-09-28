@@ -8,7 +8,7 @@ window.onload = function() {
 // Clicking on the button
 buttonLoad.onclick = function() {
     // Display the main block with user info
-    document.getElementsByClassName('main-block')[0].style.display = 'block';
+    document.getElementsByClassName('main-block')[0].style.display = 'flex';
     // Clear HTML for tabs and info block
     document.getElementsByClassName('users-tabs')[0].innerHTML = "";
     document.getElementsByClassName('info-block')[0].innerHTML = "";

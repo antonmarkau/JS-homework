@@ -8,6 +8,7 @@ html {
 
 .main-block {
     display: none;
+    flex-direction: column;
 }
 
 /* Style the buttons that are used to open the tab content */
