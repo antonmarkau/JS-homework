@@ -79,8 +79,8 @@ buttonLoad.onclick = function() {
         // If not - get data with XML request
         console.log('The userList data is not in localStorage! Sending XML request.');
         var xhr = new XMLHttpRequest();
-        //xhr.open('GET', 'https://reqres.in/api/users?page=2', true); // успешный запрос (код 200) - попадем в onload
-        xhr.open('GET', 'https://reqres.in/api2/users?page=2'); // неуспешный запрос - несуществующая страница (код 404) - попадем в onload
+        xhr.open('GET', 'https://reqres.in/api/users?page=2', true); // успешный запрос (код 200) - попадем в onload
+        //xhr.open('GET', 'https://reqres.in/api2/users?page=2'); // неуспешный запрос - несуществующая страница (код 404) - попадем в onload
         //xhr.open('GET', 'https://reqres1.in/api/users?page=2'); // неуспешный запрос - несуществующий домен (код 0) - попадем в onerror
 
         xhr.send();
