@@ -1,0 +1,30 @@
+form div {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+
+form div label {
+    display: inline-flex;
+    align-items: center;
+}
+
+form div input {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+form div p {
+    display: flex;
+    flex-direction: row;
+    vertical-align: middle;
+    margin: auto 0px auto 10px;
+    color: #B3B6B7;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+form div p span {
+    display: inline-flex;
+    align-items: center;
+    margin-left: 5px;
+}
