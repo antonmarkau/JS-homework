@@ -1,6 +1,6 @@
 // Задание 01
 function testEmail(str) {
-    var emailRegex = /^([a-zA-Z]{3,10})_([a-zA-Z]{3,10})(-\d{4})?@(?![\.\-])([a-zA-Z0-9\.\-]{2,20})(?<![\.\-])(\.com)$/;
+    var emailRegex = /^([a-z]{3,10})_([a-z]{3,10})(-\d{4})?@[a-z\d]{1,10}(\.|\-)?[a-z\d]{1,10}(\.com)$/i;
     return emailRegex.test(str);
 }
 
@@ -9,7 +9,7 @@ console.log(testEmail(email));
 
 // Задание 02
 function testPhone(str) {
-    var phoneRegex = /^(((\+)?375(-)?)|8(-)?0)(25|29|33|44|17)(-)?([0-9]{3})(-)?([0-9]{2})(-)?([0-9]{2})$/;
+    var phoneRegex = /^(\+?375-?|8-?0)(25|29|33|44|17)-?[1-9]\d{2}(-?\d{2}){2}$/;
     return phoneRegex.test(str);
 }
 

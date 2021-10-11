@@ -4,7 +4,7 @@ var inputText = document.getElementById('input-text');
 
 // Проверяем имейл по keyup
 inputEmail.onkeyup = function(event) {
-    var emailRegex = /^([a-zA-Z]{3,10})_([a-zA-Z]{3,10})(-\d{4})?@(?![\.\-])([a-zA-Z0-9\.\-]{2,20})(?<![\.\-])(\.com)$/;
+    var emailRegex = /^([a-z]{3,10})_([a-z]{3,10})(-\d{4})?@[a-z\d]{1,10}(\.|\-)?[a-z\d]{1,10}(\.com)$/i;
 
     if (!inputEmail.value.split(' ').join('')) {
         inputEmpty(event);
@@ -17,7 +17,7 @@ inputEmail.onkeyup = function(event) {
 
 // Проверяем телефон по keyup
 inputPhone.onkeyup = function(event) {
-    var phoneRegex = /^(((\+)?375(-)?)|8(-)?0)(25|29|33|44|17)(-)?([0-9]{3})(-)?([0-9]{2})(-)?([0-9]{2})$/;
+    var phoneRegex = /^(\+?375-?|8-?0)(25|29|33|44|17)-?[1-9]\d{2}(-?\d{2}){2}$/;
 
     if (!inputPhone.value.split(' ').join('')) {
         inputEmpty(event);
