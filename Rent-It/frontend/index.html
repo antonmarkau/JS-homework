@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Rent It</title>
+    <link rel="shortcut icon" href="favicon.png" type="image/png">
+
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.5.0/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.5.0/mapbox-gl.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <link rel="stylesheet/less" type="text/css" href="styles/app.less" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js"></script>
+
+    <script type="module" src="js/app.js"></script>
+
+</head>
+<body>
+    <div class="page-container">
+        <div class="page-header">
+            <h1>Rent It</h1>
+            <div class="account-info">
+                <span class="material-icons">account_circle</span><span class="username-header">Log in</span>
+            </div>
+        </div>
+        <div class="content-container">
+            <div class="map-container"></div>
+            <div class="side-panel-container">
+                <div class="side-panel-filter">
+                    <form>
+                        <div class="filter">
+                            <label for="filter-prise"><span class="material-icons">payments</span>Prise, USD</label>
+                            <div id="filter-prise" class="filter-from-to">
+                                <input id="prise-min" type="number" placeholder="min">
+                                <input id="prise-max" type="number" placeholder="max">
+                            </div>
+                        </div>
+                        <div class="filter">
+                            <label for="filter-rooms"><span class="material-icons">other_houses</span>Rooms</label>
+                            <div id="filter-rooms" class="filter-from-to">
+                                <input id="rooms-min" type="number" placeholder="min">
+                                <input id="rooms-max" type="number" placeholder="max">
+                            </div>
+                        </div>
+                        <div class="filter">
+                            <label for="filter-metro"><span class="material-icons">subway</span>Close to metro</label>
+                            <input id="filter-metro" type="checkbox">
+                        </div>
+                        <div class="btns-container">
+                            <button class="btn btn-apply-filter"><span class="material-icons">filter_alt</span>Apply filter</button>
+                            <button class="btn btn-clear-filter"><span class="material-icons">filter_alt_off</span>Clear filter</button>
+                        </div>
+                    </form>
+                    <button class="btn btn-add-feature" disabled="true" title="Log in to add a rent"><span class="material-icons">add_location_alt</span>Add a rent</button>
+                </div>
+                <div class="side-panel-addition">
+                    <form>
+                        <div class="info flex-row flex-space-btwn">
+                            <label for="prise"><span class="material-icons">payments</span>Prise, USD</label>
+                            <input id="prise" type="number">
+                        </div>
+                        <div class="info flex-row flex-space-btwn">
+                            <label for="rooms"><span class="material-icons">other_houses</span>Rooms</label>
+                            <input id="rooms" type="number">
+                        </div>
+                        <div class="info flex-row flex-space-btwn">
+                            <label for="metro"><span class="material-icons">subway</span>Close to metro station</label>
+                            <input id="metro" type="checkbox">
+                        </div>
+                        <div class="info flex-col">
+                            <label for="address"><span class="material-icons">home</span>Address information</label>
+                            <div id="address" type="text">
+                                <div class="address-group">
+                                    <input id="address-streetname" type="text" placeholder="Street name">
+                                    <input id="address-housenumber" type="number" placeholder="House">
+                                </div>
+                                <div class="address-group">
+                                    <input id="address-locality" type="text" placeholder="Locality">
+                                    <input id="address-postcode" type="text" placeholder="Postcode">
+                                    <input id="address-city" type="text" placeholder="City">
+                                    <input id="address-country" type="text" placeholder="Country">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="info flex-col">
+                            <label for="photos"><span class="material-icons">add_photo_alternate</span>Attach photos</label>
+                            <input type="file" name="photos" id="img-to-upload" accept="image/*" multiple>
+                        </div>
+                        <div class="info flex-row flex-space-btwn">
+                            <label for="name"><span class="material-icons">person_outline</span>Name</label>
+                            <input id="name" type="text">
+                        </div>
+                        <div class="info flex-row flex-space-btwn">
+                            <label for="phone"><span class="material-icons">phone</span>Phone</label>
+                            <input id="phone" type="text">
+                        </div>
+                    </form>
+                    <div class="info-please">
+                        Please fill in the information in the feilds above.
+                    </div>
+                    <div class="btns-container">
+                        <button class="btn btn-save-feature"><span class="material-icons">add_circle</span>Submit</button>
+                        <button class="btn btn-add-feature-cancel"><span class="material-icons">cancel</span>Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

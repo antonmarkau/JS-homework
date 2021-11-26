@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rent It</title>
+    <link rel="shortcut icon" href="favicon.png" type="image/png">
+
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.5.0/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.5.0/mapbox-gl.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <link rel="stylesheet/less" type="text/css" href="styles/app.less" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js"></script>
+
+    <script type="module" src="js/info.js"></script>
+</head>
+<body>
+    <div class="page-container">
+        <div class="page-header">
+            <h1>Rent It</h1>
+            <div class="account-info">
+                <span class="material-icons">account_circle</span><span class="username-header">Log in</span>
+            </div>
+        </div>
+        <div class="content-container-view">
+            <div class="map-container-view"></div>
+            <div class="feature-info-view">
+                <div class="feature-info-view-address">
+                    <span class="feature-info-address-main">STREET HOUSE</span>
+                    <span class="feature-info-address-additional">LOCALITY, POSTCODE, CITY, COUNTRY</span>
+                </div>
+                <div class="feature-info-view-prise">
+                    <span class="feature-info-prise">PRISE USD per month</span>
+                </div>
+                <div class="feature-info-view-rooms">
+                    <span class="feature-info-rooms">Rooms: ROOMS</span>
+                </div>
+                <div class="feature-info-view-metro">
+                    <span class="feature-info-metro">Close to metro station: METRO</span>
+                </div>
+                <div class="feature-info-view-owner">
+                    <span class="feature-info-owner">NAME</span>
+                </div>
+                <div class="feature-info-view-phone">
+                    <span class="feature-info-phone">PHONE</span>
+                </div>
+                <div class="img-container">
+                    <div class="no-photos">
+                        <span class="material-icons">image_not_supported</span>
+                        <span>No photos (⌣́_⌣̀)</span>
+                    </div>
+                </div>
+                <div class="btns-container">
+                    <!-- <button class="btn btn-edit-feature"><span class="material-icons">edit</span>Edit</button> -->
+                    <!-- <button class="btn btn-remove-feature"><span class="material-icons">delete_forever</span>Remove</button> -->
+                    <button class="btn btn-go-back"><span class="material-icons">undo</span>Go back</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
